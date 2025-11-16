@@ -1,0 +1,12 @@
+/* @font-face {
+    font-family: "Exo";
+    src: url("/assets/fonts/Exo-Regular.ttf") format("truetype");
+} */
+
+
+* {
+  font-family: "Exo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
