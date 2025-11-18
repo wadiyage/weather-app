@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 const formattedDate = new Intl.DateTimeFormat('en-US', options).format(date)
                 document.getElementById('lastUpdated').innerText = formattedDate
 
+                document.getElementById('conditionIcon').src = data.current.condition.icon
+
                 document.getElementById('sunRiseTime').innerText = data.forecast.forecastday[0].astro.sunrise
                 document.getElementById('sunSetTime').innerText = data.forecast.forecastday[0].astro.sunset
 
@@ -71,3 +73,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
 })
 
+
+// console.log()
