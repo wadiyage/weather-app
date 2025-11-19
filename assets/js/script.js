@@ -2,6 +2,7 @@ console.log("Hi! I'm from Js, it's working!")
 
 document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('searchInput')
+    document.getElementById('searchInput').innerText = ""
     const searchButton = document.getElementById('searchButton')
 
     searchInput.addEventListener('keydown', function (event) {
@@ -13,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     searchButton.addEventListener('click', function () {
         const city = searchInput.value
-        console.log("Searching for :" + city)
 
         fetch(`http://api.weatherapi.com/v1/forecast.json?key=e5ab97d5aad1415abeb100033251611&q=${city}&days=1&aqi=no&alerts=no`)
             .then(response => response.json())
@@ -72,6 +72,3 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
 })
-
-
-// console.log()
